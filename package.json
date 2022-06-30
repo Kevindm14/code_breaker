@@ -1,9 +1,9 @@
 {
   "scripts": {
-    "test": "jest --watch",
-    "test-once": "jest",
-    "start": "parcel carpaccio.html",
-    "build": "parcel build carpaccio.html --public-url ./"
+    "test": "jest --watch --env='jsdom'",
+    "test-once": "jest --env='jsdom'",
+    "start": "parcel codebreaker.html",
+    "build": "parcel build codebreaker.html --public-url ./"
   },
   "dependencies": {
     "@babel/core": "^7.15.4",
