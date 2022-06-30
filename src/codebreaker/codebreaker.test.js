@@ -15,5 +15,12 @@ describe("Code breaker", () => {
 
     expect(title.innerHTML).toEqual("Codebreaker");
   })
+
+  it("Validacion codigo secreto", () => {
+    document.body.innerHTML = fs.readFileSync("codebreaker.html", "utf8");
+    const texto = document.querySelector("#codigo");
+    expect(texto.value).toEqual("1234");
+  })
+
 })
 
