@@ -1,4 +1,4 @@
-import sumar from "./sumador";
+import sumar from "./sumador"
 
 describe("Sumar", () => {
   it("deberia sumar dos numeros", () => {

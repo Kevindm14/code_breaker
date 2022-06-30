@@ -2,8 +2,8 @@
   "scripts": {
     "test": "jest --watch",
     "test-once": "jest",
-    "start": "parcel sumador.html",
-    "build": "parcel build sumador.html --public-url ./"
+    "start": "parcel carpaccio.html",
+    "build": "parcel build carpaccio.html --public-url ./"
   },
   "dependencies": {
     "@babel/core": "^7.15.4",
