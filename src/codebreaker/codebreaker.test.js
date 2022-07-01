@@ -1,26 +1,9 @@
-import codebreaker from "./codebreaker"
-import fs from 'fs'
+import Codebreaker from "./codebreaker";
 
-describe("Code breaker", () => {
-  it("Que muestre el titulo", () => {
-    document.body.innerHTML = fs.readFileSync("codebreaker.html", "utf8");
-    const h1 = document.querySelector("#titulo");
-
-    expect(h1.innerHTML).toEqual("Codebreaker");
-  })
-
-  it("Cambiar title del documento", () => {
-    document.body.innerHTML = fs.readFileSync("codebreaker.html", "utf8");
-    const title = document.querySelector("title");
-
-    expect(title.innerHTML).toEqual("Codebreaker");
-  })
-
-  it("Validacion codigo secreto", () => {
-    document.body.innerHTML = fs.readFileSync("codebreaker.html", "utf8");
-    const texto = document.querySelector("#codigo");
-    expect(texto.value).toEqual("1234");
-  })
-
-})
-
+describe("Codebreaker logica", () => {
+  it("indica que gane cuando adivino el codigo secreto", () => {
+    const cb = new Codebreaker("5555");
+    const mensaje = cb.adivinar("5555");
+    expect(mensaje).toEqual("Ganaste!");
+  });
+});

@@ -21,11 +21,20 @@ describe("Codebreaker UI", () => {
     expect(resultado.innerHTML).toEqual("");
   });
 
-  it("adivino con codigo ganador", () => {
+  // it("adivino con codigo ganador", () => {
+  //   const numero = document.querySelector("#numero");
+  //   const form = document.querySelector("#adivinar-submit");
+  //   const resultado = document.querySelector("#resultado");
+  //   numero.value = "5";
+  //   form.click();
+  //   expect(resultado.innerHTML).toEqual("Ganaste!");
+  // });
+
+  it("adivino con codigo ganador con 4 digitos", () => {
     const numero = document.querySelector("#numero");
     const form = document.querySelector("#adivinar-submit");
     const resultado = document.querySelector("#resultado");
-    numero.value = "5";
+    numero.value = "5555";
     form.click();
     expect(resultado.innerHTML).toEqual("Ganaste!");
   });
