@@ -9,6 +9,8 @@ describe("Codebreaker UI", () => {
   afterEach(() => {
     const resultado = document.querySelector("#resultado");
     resultado.innerHTML = "";
+    const numero = document.querySelector("#numero");
+    numero.innerHTML = "";
   });
 
   it("mostrar el nombre del juego", () => {
@@ -21,14 +23,14 @@ describe("Codebreaker UI", () => {
     expect(resultado.innerHTML).toEqual("");
   });
 
-  // it("adivino con codigo ganador", () => {
-  //   const numero = document.querySelector("#numero");
-  //   const form = document.querySelector("#adivinar-submit");
-  //   const resultado = document.querySelector("#resultado");
-  //   numero.value = "5";
-  //   form.click();
-  //   expect(resultado.innerHTML).toEqual("Ganaste!");
-  // });
+  it("validar mensaje con codigo errado", () => {
+    const numero = document.querySelector("#numero");
+    const form = document.querySelector("#adivinar-submit");
+    const resultado = document.querySelector("#resultado");
+    numero.value = "5";
+    form.click();
+    expect(resultado.innerHTML).toEqual("Sigue intentando!");
+  });
 
   it("adivino con codigo ganador con 4 digitos", () => {
     const numero = document.querySelector("#numero");

@@ -9,8 +9,8 @@ form.addEventListener("submit", (event) => {
 
   const numeroAleatorio = obtenerNumeroAleatorio()
 
-  const cb = new Codebreaker("5555");
-  const mensaje = cb.adivinar("5555");
+  const cb = new Codebreaker(numero.value);
+  const mensaje = cb.adivinar(numero.value);
   resultado.innerHTML = mensaje;
 });
 
